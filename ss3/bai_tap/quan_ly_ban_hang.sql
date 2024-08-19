@@ -8,6 +8,7 @@ insert into orderdetail(oID, pID, odQTY) values
 (2,5,4),
 (2,3,3);
 
+insert into orderdetail(oID, pID, odQTY) values(5,2,5);
 select oID, oDate, oTotalPrice
 from orderr;
 
@@ -28,7 +29,7 @@ join
 orderdetail on orderdetail.oID = orderr.oID
 where odQTY is null;
 
-select orderdetail.oID, oDate,
+select orderdetail.oID, orderr.oDate,
 sum(odQTY * pPrice) as Totalprice
 from orderdetail
 join
@@ -36,4 +37,4 @@ product on product.pID = orderdetail.pID
 join
 orderr on orderdetail.oID = orderr.oID
 group by
-orderdetail.oID, orderr.oDate;
+orderdetail.oID;
