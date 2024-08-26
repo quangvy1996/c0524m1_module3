@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .content {
+            height: 70%;
+        }
+
+        .left {
+            /*min-height: 30%;*/
+            background-color: bisque;
+        }
+
+        .main {
+            background-color: darkgray;
+            /*min-height: 30%;*/
+        }
+
+        .right {
+            /*min-height: 30%;*/
+            background-color: aquamarine;
+        }
+        .footer{
+            background-color: darksalmon;
+            height: 20%;
+        }
+
+        @media screen and (max-width: 500px) {
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+        }
+        @media screen and (min-width : 501px)and (max-width: 700px) {
+            .col-md-1 {width: 8.33%;}
+            .col-md-2 {width: 16.66%;}
+            .col-md-3 {width: 25%;}
+            .col-md-4 {width: 33.33%;}
+            .col-md-5 {width: 41.66%;}
+            .col-md-6 {width: 50%;}
+            .col-md-7 {width: 58.33%;}
+            .col-md-8 {width: 66.66%;}
+            .col-md-9 {width: 75%;}
+            .col-md-10 {width: 83.33%;}
+            .col-md-11 {width: 91.66%;}
+            .col-md-12 {width: 100%;}
+
+        }
+        @media screen and (min-width : 710px) {
+            .col-lg-1 {width: 8.33%;}
+            .col-lg-2 {width: 16.66%;}
+            .col-lg-3 {width: 25%;}
+            .col-lg-4 {width: 33.33%;}
+            .col-lg-5 {width: 41.66%;}
+            .col-lg-6 {width: 50%;}
+            .col-lg-7 {width: 58.33%;}
+            .col-lg-8 {width: 66.66%;}
+            .col-lg-9 {width: 75%;}
+            .col-lg-10 {width: 83.33%;}
+            .col-lg-11 {width: 91.66%;}
+            .col-lg-12 {width: 100%;}
+        }
+    </style>
+
+</head>
+<body>
+<div id="menu" class="row">
+    <ul>
+
+        <li><a href="#">Sem 1</a>
+            <ul>
+                <li><a href="#">Computing Fundametal</a></li>
+                <li><a href="#">C Programming</a></li>
+                <li><a href="#">Building Dynamic Website</a></li>
+                <li><a href="#">MS Transact-SQL</a></li>
+                <li><a href="#">Project</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Sem 2 </a>
+            <ul>
+                <li><a href="#">Cloud Computing</a></li>
+                <li><a href="#">APJ - I</a></li>
+                <li><a href="#">APJ - II</a></li>
+                <li><a href="#">APJ - III</a></li>
+                <li><a href="#">eProject</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Sem 3</a></li>
+        <li><a href="#">Sem 4</a></li>
+
+    </ul>
+</div>
+<div class="row content">
+    <div class="col-12 col-md-3 col-lg-3 left">left</div>
+    <div class="col-12 col-md-9 col-lg-6 main"> main</div>
+    <div class="col-12 col-md-12 col-lg-3 right">right</div>
+</div>
+<div class="row footer">Footer</div>
+</body>
+</html>
