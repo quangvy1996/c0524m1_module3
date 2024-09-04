@@ -41,7 +41,7 @@ public class ProductService implements IProductService {
     @Override
     public Product findProductByName(String name) {
         for (Product product : productMap.values()) {
-            if (product.getName().contains(name)) {
+            if (product.getName().toLowerCase().contains(name)) {
                 return product;
             }
         }

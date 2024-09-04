@@ -10,11 +10,11 @@
 <h1>Search Product by Name</h1>
 
 <!-- Form để nhập tên sản phẩm cần tìm kiếm -->
-<form action="product" method="get">
+<form method="post">
     <input type="hidden" name="action" value="search">
     <label for="name">Enter Product Name:</label>
     <input type="text" id="name" name="name" required>
-    <button type="submit">Search</button>
+    <button type="submit" value="search">Search</button>
 </form>
 
 <!-- Hiển thị kết quả tìm kiếm -->

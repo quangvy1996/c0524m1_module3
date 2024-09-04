@@ -13,9 +13,10 @@
 }
 
 h4 {
-    z-index: 10;
+
     font-size: 16px;
-    overflow: hidden;
+    overflow: hidden !important;
+
 }
 
 a {
@@ -29,7 +30,7 @@ a {
 
 .price {
     font-weight: bolder;
-    color:white;
+    color: #b02a37;
     font-size: 23px;
 }
 
@@ -218,20 +219,37 @@ input:focus {
     height: 200px;
 
 }
-.video:hover{
+
+.video:hover {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
 
 }
-.ads{
+
+.ads {
     background-image: linear-gradient(to right, #fffbd5, #b20a2c);
+    margin-top: 20px;
 }
+
 video {
 
     width: 600px;
     height: 300px;
 }
-.main_content{
-    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+
+.main_content {
+    background-image: linear-gradient(90deg, rgba(231,186,176,1) 0%, rgba(247,241,241,1) 83%);
+
+}
+
+.user_name {
+
+    overflow: hidden !important;
+}
+#navbarSupportedContent{
+    margin-left: 250px;
+}
+#signup{
+    padding: 180px;
 }

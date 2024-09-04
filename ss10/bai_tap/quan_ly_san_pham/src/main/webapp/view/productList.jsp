@@ -16,6 +16,7 @@
 <body>
 <h2>All Products</h2>
 <h3><a href="product-servlet?action=create">Thêm mới sản phẩm</a></h3>
+<h3><a href="product-servlet?action=search">Tìm kiếm</a></h3>
 <table border="1">
     <tr>
         <th>ID</th>

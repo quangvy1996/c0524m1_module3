@@ -8,10 +8,12 @@
 </head>
 <body>
 <h1>Add New Product</h1>
-
-<!-- Form thêm sản phẩm mới -->
+<p>
+    <c:if test='${requestScope["message"] != null}'>
+        <span class="message">${requestScope["message"]}</span>
+    </c:if>
+</p>
 <form method="post">
-    <!-- Tham số action để xác định thao tác cần thực hiện trong servlet -->
     <input type="hidden" name="action" value="add">
 
     <label for="name">Name:</label>
@@ -26,10 +28,10 @@
     <label for="manufacturer">Manufacturer:</label>
     <input type="text" id="manufacturer" name="manufacturer" required><br><br>
 
-    <button type="submit" value="add">Add Product</button>
+    <button type="submit" value="create">Add Product</button>
 </form>
 
 <!-- Liên kết quay lại danh sách sản phẩm -->
-<a href="product-servlet">Back to Product List</a>
+<a href="/product-servlet">Back to Product List</a>
 </body>
 </html>

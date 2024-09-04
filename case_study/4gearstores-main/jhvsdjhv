@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-bottom: 1px solid #444;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header .menu-toggle {
+    display: block;
+}
+
+header .menu-toggle button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+header .menu-toggle button:hover {
+    color: #ddd;
+}
+
+aside {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+aside.active {
+    transform: translateX(0);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+aside.active ul {
+    display: block;
+}
+
+aside ul li {
+    margin: 10px 0;
+    position: relative;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    border-left: 4px solid transparent;
+    transition: border-left 0.3s ease;
+}
+
+aside ul li a:hover {
+    background-color: #ddd;
+    border-left-color: #555;
+}
+
+main {
+    margin-left: 250px;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    aside {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}

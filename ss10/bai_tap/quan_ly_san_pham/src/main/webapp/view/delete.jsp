@@ -29,13 +29,13 @@
 </table>
 
 <!-- Form xác nhận xóa -->
-<form action="product" method="post">
+<form method="post">
     <input type="hidden" name="action" value="delete">
     <input type="hidden" name="id" value="${product.id}">
-    <button type="submit">Yes, delete it!</button>
+    <button type="submit" value="delete">Yes, delete it!</button>
 </form>
 
 <!-- Liên kết quay lại danh sách sản phẩm -->
-<a href="product-servlet">No, take me back</a>
+<a href="">No, take me back</a>
 </body>
 </html>

@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 20px;
+    background-color: #333;
+    color: white;
+    border-bottom: 1px solid #444;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header .title {
+    text-align: center;
+    color: white;
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .title p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+header .menu-toggle {
+    display: block;
+}
+
+header .menu-toggle button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+header .menu-toggle button:hover {
+    color: #ddd;
+}
+
+aside {
+    z-index: auto;
+    width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+aside.active {
+    transform: translateX(0);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+aside.active ul {
+    display: block;
+}
+
+aside ul li {
+    margin: 10px 0;
+    position: relative;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    border-left: 4px solid transparent;
+    transition: border-left 0.3s ease, background-color 0.3s ease;
+}
+
+aside ul li a:hover {
+    background-color: #ddd;
+    border-left-color: #333;
+}
+
+main {
+    margin-top: 50px;
+    margin-left: 300px;
+    padding: 15px;
+    flex: 1;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    aside {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
